@@ -159,6 +159,35 @@ $controlMappings = [
     ]
 ];
 
+// Generate unique filename for the assessment
+$timestamp = date('Y-m-d-H-i-s');
+$assessment_filename = "e8_assessment_{$timestamp}.csv";
+
+// Process prospect information if provided
+$prospect_name = isset($_POST['prospect_name']) ? trim($_POST['prospect_name']) : '';
+$business_name = isset($_POST['business_name']) ? trim($_POST['business_name']) : '';
+$email_address = isset($_POST['email_address']) ? trim($_POST['email_address']) : '';
+$notes = isset($_POST['notes']) ? trim($_POST['notes']) : '';
+
+// If any prospect information is provided, save to E8Prospects.csv
+if ($prospect_name || $business_name || $email_address || $notes) {
+    $prospects_file = 'E8Prospects.csv';
+    $prospect_data = array($prospect_name, $business_name, $email_address, $notes, $assessment_filename);
+    
+    // Create header if file doesn't exist
+    if (!file_exists($prospects_file)) {
+        $prospect_header = array('Name', 'Business Name', 'Email Address', 'Notes', 'Filename');
+        $fp = fopen($prospects_file, 'w');
+        fputcsv($fp, $prospect_header);
+        fclose($fp);
+    }
+    
+    // Append prospect data
+    $fp = fopen($prospects_file, 'a');
+    fputcsv($fp, $prospect_data);
+    fclose($fp);
+}
+
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Clear any previous output
@@ -190,12 +219,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
     // Generate CSV
-    $timestamp = date('Y-m-d-H-i-s');
     $filename = "e8_assessment_$timestamp.csv";
     
     // Set headers for CSV download
     header('Content-Type: text/csv; charset=utf-8');
-    header('Content-Disposition: attachment; filename="' . $filename . '"');
+    header('Content-Disposition: attachment; filename="' . $assessment_filename . '"');
     header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
     header('Pragma: public');
     
@@ -234,4 +262,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Location: index.php');
     exit;
 }
-?> 

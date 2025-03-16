@@ -3,14 +3,61 @@
 }
 
 .question-card {
-    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 5px solid #0d6efd;
+    margin-bottom: 4rem !important;
     background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 .question-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+/* Category-specific colors */
+/* .question-card.software-control {
+    border-left-color: #2E86C1;
+}
+
+.question-card.software-updates {
+    border-left-color: #27AE60;
+}
+
+.question-card.document-safety {
+    border-left-color: #8E44AD;
+}
+
+.question-card.internet-safety {
+    border-left-color: #E67E22;
+}
+
+.question-card.special-access {
+    border-left-color: #C0392B;
+}
+
+.question-card.login-security {
+    border-left-color: #16A085;
+}
+
+.question-card.system-security {
+    border-left-color: #2C3E50;
+}
+
+.question-card.data-backups {
+    border-left-color: #F39C12;
+}
+
+.question-card.security-alerts {
+    border-left-color: #E74C3C;
+}
+
+.question-card.security-guidelines {
+    border-left-color: #1ABC9C;
+} */
 
 .form-check-input:checked {
     background-color: #0d6efd;
@@ -20,12 +67,15 @@
 body {
     background-color: #f8f9fa;
     color: #212529;
+    padding-top: 76px; /* Adjust this value based on navbar height */
 }
 
 .category-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #0d6efd;
+    color: #ffffff;
+}
+
+.category-icon i {
+    font-size: 1.5rem;
 }
 
 .navbar-brand img {
@@ -55,31 +105,52 @@ body {
 }
 
 .header-logo {
-    max-height: 100px;
-    margin-bottom: 2rem;
+    max-width: 200px;
+    margin-top: 2rem;
 }
 
 .header-section {
-    background: linear-gradient(to bottom, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02));
-    padding: 3rem 0;
-    border-radius: 0.5rem;
+    background: #ffffff;
+    padding: 3rem 4rem;
+    border-radius: 4px;
     margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, #0d6efd, #3498DB);
+}
+
+.header-section h1 {
+    margin: 2rem 0;
+    padding: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-section .lead {
+    margin: 2rem 0;
+    padding: 0;
 }
 
 .header-section .small {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0;
     line-height: 1.5;
 }
 
-.card {
-    background-color: #ffffff;
-    border: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
 .card-body {
-    color: #212529;
+    padding: 1.5rem;
 }
 
 .text-muted {
@@ -95,19 +166,22 @@ body {
     gap: 1rem;
     justify-content: center;
     display: inline-flex;
-    width: auto;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
 .btn-group .btn {
     border-radius: 0.375rem !important;
-    min-width: 300px;
-    padding: 0.5rem 1.5rem;
+    min-width: 200px;
+    padding: 0.75rem 2rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-size: 0.875rem;
     transition: all 0.2s ease;
     position: relative;
+    flex: 1;
 }
 
 /* Base styles */
@@ -183,13 +257,42 @@ body {
 
 .progress-container {
     position: sticky;
-    top: 0;
-    z-index: 1000;
+    top: 66px;
+    z-index: 1020;
     background: white;
-    padding: 1rem;
+    padding: 1.5rem;
+    padding-top: 1.75rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.progress-container h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 0.75rem;
+}
+
+.progress {
+    height: 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.5rem;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+    border-radius: 0.5rem;
+    transition: width 0.3s ease;
+}
+
+.progress-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: #6c757d;
+    font-size: 0.875rem;
 }
 
 .invalid-feedback {
@@ -212,4 +315,120 @@ body {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
+}
+
+.card-title {
+    background: linear-gradient(135deg, #0d6efd, #3498DB);
+    color: #fff;
+    padding: 1.25rem;
+    margin: -1px -1px 0 -1px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% + 2px);
+}
+
+.mb-4 {
+    padding: 0;
+}
+
+.question-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .question-cards-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Ensure all cards in a row start at the same height */
+.question-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+}
+
+.question-card .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-card .card-body > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remove any conflicting margins or padding */
+.row > [class*="col-"] {
+    padding: 0;
+}
+
+/* Ensure consistent spacing */
+.question-card .form-text {
+    margin-bottom: 1rem !important;
+}
+
+.question-card .text-center {
+    margin-top: auto;
+}
+
+.text-center {
+    margin-top: auto;
+    padding: 0 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container.py-5 {
+    position: relative;
+}
+
+.prospect-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.prospect-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0d6efd, #3498DB);
+}
+
+.prospect-form input {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+}
+
+.prospect-form input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 } 
