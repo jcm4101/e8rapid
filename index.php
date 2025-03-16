@@ -59,14 +59,16 @@
                     </div>
 
                     <!-- Application Environment Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card software-control">
+                        <div class="card-title">
+                            Software Control
+                            <div class="category-icon">
                                 <i class="bi bi-shield-lock"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Software Control</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
-                                <label class="form-label fw-bold">1. Can staff only install and run approved software on work computers?</label>
+                                <label class="form-label fw-bold">1. Can staff <strong>ONLY</strong> install and run approved software on work computers?</label>
                                 <div class="form-text mb-2">This means having controls in place that prevent users from downloading and running unauthorized programs on company computers and servers.</div>
                                 <div class="text-center">
                                     <div class="btn-group" role="group">
@@ -82,12 +84,14 @@
                     </div>
 
                     <!-- Update Management Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card software-updates">
+                        <div class="card-title">
+                            Software Updates
+                            <div class="category-icon">
                                 <i class="bi bi-arrow-repeat"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Software Updates</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">2. Do you have a system that automatically updates your software within a month of updates being released?</label>
                                 <div class="form-text mb-2">This includes having a process to regularly update all company computers, systems, and applications when security fixes become available.</div>
@@ -105,14 +109,16 @@
                     </div>
 
                     <!-- Microsoft Office Security Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card document-safety">
+                        <div class="card-title">
+                            Document Safety
+                            <div class="category-icon">
                                 <i class="bi bi-file-earmark-code"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Document Safety</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
-                                <label class="form-label fw-bold">3. Are Microsoft Office documents from outside your organization blocked from running automated tasks?</label>
+                                <label class="form-label fw-bold">3. Are Microsoft Office documents from outside your organization blocked from running automated tasks (Macros)?</label>
                                 <div class="form-text mb-2">This means preventing potentially harmful automated actions (macros) in Microsoft Office files that come from external sources or the internet.</div>
                                 <div class="text-center">
                                     <div class="btn-group" role="group">
@@ -128,12 +134,14 @@
                     </div>
 
                     <!-- Web Protection Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card internet-safety">
+                        <div class="card-title">
+                            Internet Safety
+                            <div class="category-icon">
                                 <i class="bi bi-globe"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Internet Safety</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">4. Do you have safety measures in place to block harmful content when staff browse the internet or use email?</label>
                                 <div class="form-text mb-2">This includes having systems that filter out dangerous websites, block malicious email attachments, and prevent harmful content from reaching users.</div>
@@ -151,12 +159,14 @@
                     </div>
 
                     <!-- Administrative Access Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card special-access">
+                        <div class="card-title">
+                            Special Access Rights
+                            <div class="category-icon">
                                 <i class="bi bi-person-badge"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Special Access Rights</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">5. Do you carefully control who gets administrator access to company systems?</label>
                                 <div class="form-text mb-2">This means having a process to approve and review who gets special access privileges, and ensuring these powerful accounts are only used when necessary.</div>
@@ -174,12 +184,14 @@
                     </div>
 
                     <!-- Authentication Controls Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card login-security">
+                        <div class="card-title">
+                            Login Security (MFA)
+                            <div class="category-icon">
                                 <i class="bi bi-key"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Login Security</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">6. Do you require two-step verification when staff access company systems from outside the office?</label>
                                 <div class="form-text mb-2">This means using something extra beyond just a password (like a code sent to a phone) when people need to access work systems remotely.</div>
@@ -197,12 +209,14 @@
                     </div>
 
                     <!-- System Hardening Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card system-security">
+                        <div class="card-title">
+                            System Security
+                            <div class="category-icon">
                                 <i class="bi bi-shield-check"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">System Security</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">7. Are unnecessary features and functions turned off on your computers and systems?</label>
                                 <div class="form-text mb-2">This means disabling or removing any unnecessary programs, features, or services that aren't required for daily business operations.</div>
@@ -220,12 +234,14 @@
                     </div>
 
                     <!-- Backup Management Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card data-backups">
+                        <div class="card-title">
+                            Data Backups
+                            <div class="category-icon">
                                 <i class="bi bi-cloud-arrow-up"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Data Backups</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">8. Do you regularly back up important company data and check that you can restore it?</label>
                                 <div class="form-text mb-2">This means having regular backups of important files and systems, and testing that you can actually recover them when needed.</div>
@@ -243,12 +259,14 @@
                     </div>
 
                     <!-- Security Monitoring Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card security-alerts">
+                        <div class="card-title">
+                            Security Alerts
+                            <div class="category-icon">
                                 <i class="bi bi-graph-up"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Security Alerts</h3>
+                        </div>
+                        <div class="card-body">
                             <div class="mb-4">
                                 <label class="form-label fw-bold">9. Do you have systems in place to detect and warn you about unusual or suspicious activity?</label>
                                 <div class="form-text mb-2">This means having tools that monitor your systems and alert you when something unusual or potentially dangerous happens.</div>
@@ -266,13 +284,15 @@
                     </div>
 
                     <!-- Security Governance Section -->
-                    <div class="card mb-4 question-card">
-                        <div class="card-body">
-                            <div class="text-primary category-icon">
+                    <div class="card mb-4 question-card security-guidelines">
+                        <div class="card-title">
+                            Security Guidelines for Staff
+                            <div class="category-icon">
                                 <i class="bi bi-clipboard-check"></i>
                             </div>
-                            <h3 class="card-title h4 mb-4">Security Guidelines</h3>
-                            <div class="mb-4">
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4"></div>
                                 <label class="form-label fw-bold">10. Do you have written security rules that are regularly updated and followed?</label>
                                 <div class="form-text mb-2">This means having clear security policies that everyone knows about, and making sure these rules are kept up to date and properly followed.</div>
                                 <div class="text-center">
