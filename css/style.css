@@ -402,4 +402,33 @@ body {
 
 .container.py-5 {
     position: relative;
+}
+
+.prospect-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.prospect-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #0d6efd, #3498DB);
+}
+
+.prospect-form input {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem 1rem;
+}
+
+.prospect-form input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 } 

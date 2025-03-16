@@ -37,6 +37,31 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <form action="process.php" method="post" id="assessmentForm" target="_blank" novalidate>
+                    <!-- Prospect Form -->
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-lg-8">
+                            <div class="prospect-form">
+                                <h6 class="text-muted mb-3">
+                                    <i class="bi bi-person-vcard me-2"></i>Your Information (Optional)
+                                </h6>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="prospect_name" placeholder="Your Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="business_name" placeholder="Business Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" name="email_address" placeholder="Email Address">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" name="notes" placeholder="Notes">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Progress bar -->
                     <div class="progress-container mb-5">
                         <h6 class="text-muted mb-3">
@@ -424,6 +449,12 @@
                 // Reset form after successful submission
                 setTimeout(() => {
                     form.reset();
+                    // Clear prospect form fields
+                    document.querySelector('input[name="prospect_name"]').value = '';
+                    document.querySelector('input[name="business_name"]').value = '';
+                    document.querySelector('input[name="email_address"]').value = '';
+                    document.querySelector('input[name="notes"]').value = '';
+                    // Reset progress indicators
                     progressBar.style.width = '0%';
                     progressBar.setAttribute('aria-valuenow', 0);
                     progressPercentage.textContent = '0%';
