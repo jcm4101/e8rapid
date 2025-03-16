@@ -67,6 +67,7 @@
 body {
     background-color: #f8f9fa;
     color: #212529;
+    padding-top: 76px; /* Adjust this value based on navbar height */
 }
 
 .category-icon {
@@ -256,10 +257,11 @@ body {
 
 .progress-container {
     position: sticky;
-    top: 0;
-    z-index: 1000;
+    top: 66px;
+    z-index: 1020;
     background: white;
     padding: 1.5rem;
+    padding-top: 1.75rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -336,8 +338,11 @@ body {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 2rem !important;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -384,4 +389,17 @@ body {
 .text-center {
     margin-top: auto;
     padding: 0 1.5rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.container.py-5 {
+    position: relative;
 } 
