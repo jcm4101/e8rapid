@@ -292,7 +292,7 @@
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="mb-4"></div>
+                            <div class="mb-4">
                                 <label class="form-label fw-bold">10. Do you have written security rules that are regularly updated and followed?</label>
                                 <div class="form-text mb-2">This means having clear security policies that everyone knows about, and making sure these rules are kept up to date and properly followed.</div>
                                 <div class="text-center">

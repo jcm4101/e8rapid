@@ -6,8 +6,8 @@
     border: none;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-left: 5px solid;
-    margin-bottom: 1.5rem !important;
+    border-left: 5px solid #0d6efd;
+    margin-bottom: 4rem !important;
     background-color: #ffffff;
     overflow: hidden;
     border-radius: 4px;
@@ -19,45 +19,45 @@
 }
 
 /* Category-specific colors */
-.question-card.software-control {
-    border-left-color: #2E86C1; /* Blue */
+/* .question-card.software-control {
+    border-left-color: #2E86C1;
 }
 
 .question-card.software-updates {
-    border-left-color: #27AE60; /* Green */
+    border-left-color: #27AE60;
 }
 
 .question-card.document-safety {
-    border-left-color: #8E44AD; /* Purple */
+    border-left-color: #8E44AD;
 }
 
 .question-card.internet-safety {
-    border-left-color: #E67E22; /* Orange */
+    border-left-color: #E67E22;
 }
 
 .question-card.special-access {
-    border-left-color: #C0392B; /* Red */
+    border-left-color: #C0392B;
 }
 
 .question-card.login-security {
-    border-left-color: #16A085; /* Teal */
+    border-left-color: #16A085;
 }
 
 .question-card.system-security {
-    border-left-color: #2C3E50; /* Dark Blue */
+    border-left-color: #2C3E50;
 }
 
 .question-card.data-backups {
-    border-left-color: #F39C12; /* Yellow */
+    border-left-color: #F39C12;
 }
 
 .question-card.security-alerts {
-    border-left-color: #E74C3C; /* Bright Red */
+    border-left-color: #E74C3C;
 }
 
 .question-card.security-guidelines {
-    border-left-color: #1ABC9C; /* Turquoise */
-}
+    border-left-color: #1ABC9C;
+} */
 
 .form-check-input:checked {
     background-color: #0d6efd;
@@ -109,10 +109,24 @@ body {
 }
 
 .header-section {
-    background: linear-gradient(to bottom, rgba(13, 110, 253, 0.05), rgba(13, 110, 253, 0.02));
-    padding: 3rem 0;
-    border-radius: 0.5rem;
+    background: #ffffff;
+    padding: 3rem 2rem;
+    border-radius: 4px;
     margin-bottom: 2rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(135deg, #0d6efd, #3498DB);
 }
 
 .header-section .small {
