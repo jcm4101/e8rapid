@@ -104,13 +104,13 @@ body {
 }
 
 .header-logo {
-    max-height: 100px;
-    margin-bottom: 2rem;
+    max-width: 200px;
+    margin-top: 2rem;
 }
 
 .header-section {
     background: #ffffff;
-    padding: 3rem 2rem;
+    padding: 3rem 4rem;
     border-radius: 4px;
     margin-bottom: 2rem;
     border: none;
@@ -129,9 +129,22 @@ body {
     background: linear-gradient(135deg, #0d6efd, #3498DB);
 }
 
+.header-section h1 {
+    margin: 2rem 0;
+    padding: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.header-section .lead {
+    margin: 2rem 0;
+    padding: 0;
+}
+
 .header-section .small {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0;
     line-height: 1.5;
 }
 
