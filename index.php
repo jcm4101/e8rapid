@@ -25,7 +25,7 @@
             <div class="col-lg-8 text-center header-section">
                 <img src="img/fnlogo.png" alt="Company Logo" class="header-logo">
                 <h1 class="display-4 mb-3">Essential Eight M1 Quick Assessment</h1>
-                <p class="lead text-muted">Answer these 10 questions to evaluate your Essential Eight M1 compliance status.</p>
+                <p class="lead text-muted">Answer these 10 quick questions and see how you prepared your business is.</p>
                 <p class="text-muted small mt-2">
                     <i class="bi bi-info-circle me-1"></i>
                     This tool provides an approximate indication of your Essential Eight Maturity Level 1 status. 
